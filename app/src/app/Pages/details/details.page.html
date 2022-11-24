@@ -1,0 +1,46 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<ion-content>
+
+    <ion-list class="ion-text-center main-header">
+        <div  class="col-md-auto img ">
+            <img (click)="showAlert(detail?.id)" src="../../../assets/iconImage/bin (1).png" />
+            <span (click)="gotToDocteur()">X</span>
+            <div class="text-center">
+                <ion-label color="white">
+                    Détails
+                </ion-label>
+            </div>
+        </div>
+    </ion-list>
+    <!-- <h5>Veuillez choisir une option <br> de suivi</h5> -->
+    <!--========= CHOIX INTERFACE ===========-->
+    <ion-card>
+        <ion-item><b>Nom : </b> &nbsp;&nbsp;{{detail?.nomComplet}} </ion-item>
+        <ion-item><b>Adresse : </b> &nbsp;&nbsp; {{detail?.adresse}}</ion-item>
+        <ion-item><b>Téléphone: </b> &nbsp;&nbsp;{{detail?.mobile}} </ion-item>
+        <ion-item><b>Email : </b> &nbsp;&nbsp;{{detail?.email}} </ion-item>
+        <ion-item *ngIf="detail?.Type==='MEDECIN'"><b>Specialite : </b> &nbsp;&nbsp; {{detail?.specialite}}</ion-item>
+        <ion-item *ngIf="detail?.Type==='UTILISATEUR'"><b>Suivi : </b> &nbsp;&nbsp; {{detail?.suivie}}</ion-item>
+    </ion-card>
+
+    <ion-card *ngIf="detail?.Type==='UTILISATEUR'">
+        <ion-label>
+            Dernier Analyse
+        </ion-label>
+        <ion-item><b>Date : </b> &nbsp;&nbsp;{{userData?.date | date: 'dd MMM yyyy'}}&nbsp;&nbsp;&nbsp; à &nbsp;{{userData?.date | date: 'HH:mm'}} </ion-item>
+        
+        <ion-item *ngIf="userData?.maladies==='DIABETE'"><b>Valeur : </b> &nbsp;&nbsp;{{userData?.valeurA}}
+            {{userData?.valeurC}}</ion-item>
+          <ion-item *ngIf="userData?.maladies==='TENSION'"><b>Valeur Systolique : </b> &nbsp;&nbsp;{{userData?.valeurA}}
+          </ion-item>
+          <ion-item *ngIf="userData?.maladies==='TENSION'"><b>Valeur Diastolique : </b> &nbsp;&nbsp; {{userData?.valeurB}}
+          </ion-item>
+          <ion-item class="aa" *ngIf="userData?.couleur===1" ><b>Resultat: </b> &nbsp;&nbsp;{{userData?.resultat}} </ion-item>
+          <ion-item class="bb" *ngIf="userData?.couleur===2" ><b>Resultat: </b> &nbsp;&nbsp;{{userData?.resultat}} </ion-item>
+          <ion-item class="cc" *ngIf="userData?.couleur===3" ><b>Resultat: </b> &nbsp;&nbsp;{{userData?.resultat}} </ion-item>
+    </ion-card>
+    <a style="text-decoration: none;" href="tel:{{detail?.mobile}}">
+        <img title="appeler" src="../../../assets/iconImage/call.png" alt="">
+    </a>
+</ion-content>

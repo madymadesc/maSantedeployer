@@ -1,0 +1,114 @@
+.headd{
+    .a{
+      width: 200px; 
+      text-align: right;
+      h3{
+        margin-top: 35px; 
+        margin-right: 10px;
+      }
+    }
+    .col{
+      ion-img{
+        height: 50px;
+      margin-top:20px;
+      }
+    }
+  }
+//   fin head
+
+ion-content{
+   --background: #1D5F24;
+   .main_content_div{
+       width: 100%;
+       .menu_btn{
+           position: relative;
+           top: 40px;
+           left: 10px;
+       }
+   }
+   ion-label{
+       display: block;
+       color: white;
+       text-align: center;
+   }
+   .content_div{
+       background: white;
+       width: 100%;
+       border-top-right-radius: 75px;
+       border-bottom-left-radius: 20px;
+       margin-top: 10px;
+       padding-top: 30px;
+   }
+   .info{
+       color:#1D5F24;
+       font-size: 20px;
+       font-weight: bold;
+
+   }
+  
+   .animated{
+       --webkit-animation-duration: 3s;
+       animation-duration: 3s;
+       -webkit-animation-fill-mode: both;
+       animation-fill-mode: both;
+   }
+   @-webkit-keyframes bounceInUp{
+       0%{
+           opacity: 0;
+           -webkit-transform :translateY(200px);
+       }
+      
+       80%{
+        
+        -webkit-transform :translateY(10px);
+       }
+       
+   }
+
+   .bounceInUp{
+       -webkit-animation-name: bounceInUp;
+       animation-name: bounceInUp;
+   }
+   @keyframes bounceInUp{
+    0%{
+        opacity: 0;
+        -webkit-transform :translateY(200px);
+    }
+    
+    80%{
+    
+     -webkit-transform :translateY(10px);
+    }
+    
+}
+ion-item{
+    font-size: 17px;
+}
+}
+
+// =================
+.container-form-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-btn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 40px;
+    width: 15em;
+    background-color: #1D5F24;
+    border-radius: 18px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.5);
+  }
+
+  .form-btn:hover {
+    background-color: #114e17;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
+  }

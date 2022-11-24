@@ -1,0 +1,57 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="container headd" routerLink="/profile" >
+      <div class="row" style="display: flex;">
+        <div class="col a" ><h3></h3></div>
+        <div class="col"><ion-img src="../../../assets/iconImage/account.png"></ion-img></div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main_content_div">
+    <ion-buttons slot="start" class="back_btn">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <div class="user_div">
+    </div>
+    <div class="content_div animated bounceInUp" >
+        <ion-label class="info">Suivi Tension</ion-label>
+    </div>
+  </div>
+  <!-- ================================================================ -->
+  <form #donnee="ngForm" (ngSubmit)="calculT(donnee)" novalidate autocomplete="nope" >
+    <div class="card">
+      <ion-card-content>
+        Quel sont vos taux d'aujourd'hui ?
+      </ion-card-content>
+      <!-- =========================SYSTOLIQUE======================== -->
+      <div >
+        <h4> <strong>Systolique </strong><b> <span>{{rangeVal}}</span> mmHg </b></h4>
+        <ion-range [(ngModel)]="rangeVal" min="100" max="200" pin="true" type="number" ngModel name="valeurA">
+          <ion-icon slot="start" size="medium" name="fitness-outline" color="green"></ion-icon>
+          <ion-icon slot="end" size="medium" name="fitness-outline" color="danger"></ion-icon>
+        </ion-range>
+      </div>
+      <!-- =========================DIASTOLIQUE======================== -->
+      <div>
+        <h4><strong>Diastolique </strong><b> <span>{{rangeValu}}</span> mmHg </b></h4>
+        <ion-range [(ngModel)]="rangeValu" min="60" max="120" pin="true" type="" ngModel name="valeurB">
+          <ion-icon slot="start" size="medium" name="fitness-outline" color="green"></ion-icon>
+          <ion-icon slot="end" size="medium" name="fitness-outline" color="danger"></ion-icon>
+        </ion-range>
+      </div>
+  
+    </div>
+    <div class="container-form-btn">
+      <button  type="submit" class="form-btn custom-font">
+      Validez
+      </button>
+    </div>   
+  </form>
+
+</ion-content>

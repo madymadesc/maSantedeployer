@@ -1,0 +1,24 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<ion-content>
+
+  <ion-list class="ion-text-center main-header">
+    <h6 (click)="gotToConseils()">X</h6>
+    <div class="text-center">
+    </div>
+</ion-list>
+<!--========= CHOIX INTERFACE ===========-->
+<div class="container etat">
+  <div class="row">
+    <img src="{{img}}{{conseil?.id}}">
+  </div>
+  <div class="row">
+    <h3>{{conseil?.libelle}}</h3>
+  </div>
+  <div class="row">
+    <p>{{conseil?.description}}</p>
+  </div>
+</div>
+
+
+</ion-content>

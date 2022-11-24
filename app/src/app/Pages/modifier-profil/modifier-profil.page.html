@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h4>Modifier votre Profil</h4>
+    <form (ngSubmit)="modifierCompte()" class="ion-padding">
+      <!-- ================Nom Complet============= -->
+      <div class="wrap-input">
+        <ion-label position="floating">Nom Complet</ion-label>
+        <input class="input" type="text" name="nomComplet" [(ngModel)]="infoUser.nomComplet" ngModel required>
+      </div>
+      <!-- ================Email============= -->
+      <div class="wrap-input">
+        <ion-label position="floating">Email</ion-label>
+        <input class="input" type="email" name="email" [(ngModel)]="infoUser.email" ngModel required>
+      </div>
+      <!-- ================Mobile============= -->
+      <div class="wrap-input">
+        <ion-label position="floating">Téléphone</ion-label>
+        <input class="input" type="mobile" name="mobile" [(ngModel)]="infoUser.mobile" ngModel required>
+      </div>
+      <!-- ================Adresse============= -->
+      <div class="wrap-input">
+        <ion-label position="floating">Adresse</ion-label>
+        <input class="input" type="text" name="adresse" [(ngModel)]="infoUser.adresse" ngModel required>
+      </div>
+
+      <!-- ================Medecin Specialite============= -->
+      <div class="wrap-input" *ngif="infoUser?.Type=='MEDECIN'">
+        <ion-label position="floating">Specialite</ion-label>
+        <ion-select class="input" type="text" name="specialite" [(ngModel)]="infoUser.specialite" ngModel required>
+          <ion-select-option value="DIABETOLOGUE">Diabetologue</ion-select-option>
+          <ion-select-option value="CARDIOLOGUE">Cardiologue</ion-select-option>
+        </ion-select>
+      </div>
+
+      <!-- ================Mot de passe============= -->
+      <div class="wrap-input">
+        <ion-label position="floating">Date de Naissance</ion-label>
+        <input class="input" type="date" name="dateDeNaissance" [(ngModel)]="infoUser.dateDeNaissance" ngModel required>
+      </div>
+      <!-- ================Date de Naissance============= -->
+      <div class="wrap-input">
+        <ion-label position="floating">Mot de Passe</ion-label>
+        <input class="input" type="text" name="motDePasse" [(ngModel)]="infoUser.motDePasse" ngModel required>
+      </div>
+      <!-- ================Boutton S'inscrire============= -->
+      <div class="container-form-btn">
+        <button type="submit" class="form-btn custom-font">
+          Modifier
+        </button>
+      </div>
+    </form>
+  </div>
+</ion-content>

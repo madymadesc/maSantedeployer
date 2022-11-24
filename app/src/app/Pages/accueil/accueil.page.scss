@@ -1,0 +1,128 @@
+.custom-font {
+    font-family: 'Bai Jamjuree', sans-serif;
+  }
+
+  .headd{
+    .a{
+      width: 200px; 
+      text-align: right;
+      h3{
+        margin-top: 35px; 
+        margin-right: 10px;
+      }
+    }
+    .col{
+      ion-img{
+        height: 50px;
+      margin-top:20px;
+      }
+    }
+  }
+ 
+  ion-content{
+  h3{
+      font-weight: bold;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #1D5F24;
+  }
+  p{
+      text-align: center;
+      color: #1D5F24;
+  }
+
+// =======================================
+.container{
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    ion-card{
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px 0px rgba(57, 82, 57, 0.4);
+      ion-img{
+        height: 60px;
+        margin-top: 10px;
+      }
+      p{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #1D5F24;
+      }
+    
+    }
+    ion-card:hover{
+      border: #1D5F24 solid;
+      }
+  }
+  }
+
+  .etat{
+    border-top: solid #1D5F24 10px;
+    background-color: #bfbfbf15;
+    h4{
+      text-align: center;
+      font-weight: bold;
+      border-radius:30px 30px 0 0;
+      border-top: solid #1D5F24 10px;
+
+    }
+    .message{
+      border-bottom: solid #1D5F24 10px;
+      border-radius:0 0 30px 30px;
+    }
+    .row{
+      display: flex;
+    justify-content: center;
+    margin-top: 0px;
+      .col{
+        width: 130px;
+
+      }
+      .aa{
+        font-size: 20px;
+        background-color: #6FD007;
+        border-radius: 30px;
+        margin-bottom: 20px;
+        height: 40px;
+        border-top: 0;
+    }
+    .bb{
+      font-size: 20px;
+      background-color: #FFC000;
+      border-radius: 30px;
+        margin-bottom: 20px;
+        height: 40px;
+      border-top: 0;
+  }
+  .cc{
+    font-size: 20px;
+    background-color: #ff0000;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    height: 40px;
+    border-top: 0;
+}
+    }
+
+    .suivie{
+      text-align: left;
+      margin-left: 20px;
+      span{
+        font-weight: bold;
+        
+      }
+    }
+  }
+  
+
+}
+
+
+
+

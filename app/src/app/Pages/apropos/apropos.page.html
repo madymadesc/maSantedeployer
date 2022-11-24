@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="custom-menu" slot="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>A Propos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="content_div animated bounceInUp" >
+      
+        
+        <ion-card *ngFor="let items of apropos">
+     
+       <h4>{{items?.titleA}}</h4>
+       <h5>{{items?.title1}}</h5>
+       <P>{{items?.corp1}}</P>
+       <h5>{{items?.title2}}</h5>
+       <P>{{items?.corp2}}</P>
+       <h5>{{items?.title3}}</h5>
+       <P>{{items?.corp3}}</P>
+     <ion-item></ion-item>
+        </ion-card>
+    </div>
+    
+  </div>
+  </ion-content>

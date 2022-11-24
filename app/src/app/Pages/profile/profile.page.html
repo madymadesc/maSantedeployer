@@ -1,0 +1,97 @@
+<!-- header -->
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button menuId="custom-menu" slot="start"></ion-menu-button>
+    <div class="container headd" routerLink="/profile" >
+      <div class="row" style="display: flex;">
+        <div class="col a" ><h3></h3></div>
+        <div class="col"*ngIf="InfoUser?.Type==='MEDECIN'"><ion-img src="../../../assets/iconImage/doctor.png"></ion-img></div>
+        <div class="col" *ngIf="InfoUser?.Type==='UTILISATEUR'"><ion-img src="../../../assets/iconImage/account.png"></ion-img></div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<!-- fin header -->
+<ion-content>
+  <div class="main_content_div">
+    <div class="content_div animated bounceInUp" >
+        <ion-label class="info">Profil</ion-label>
+        <ion-card>
+          <ion-item><b>Nom : </b> &nbsp;&nbsp; {{profil?.nomComplet}}</ion-item>
+      <ion-item><b>Adresse : </b> &nbsp;&nbsp; {{profil?.adresse}}</ion-item>
+      <ion-item><b>Age : </b> &nbsp;&nbsp; {{profil?.age}} ans</ion-item>
+      <ion-item><b>Téléphone: </b> &nbsp;&nbsp; {{profil?.mobile}}</ion-item>
+      <ion-item><b>Email : </b> &nbsp;&nbsp; {{profil?.email}}</ion-item>
+      <ion-item *ngIf="InfoUser?.Type==='MEDECIN'"><b>Specialite : </b> &nbsp;&nbsp; {{profil?.specialite}}</ion-item>
+      <ion-item *ngIf="InfoUser?.Type==='UTILISATEUR'"><b>Suivie : </b> &nbsp;&nbsp; {{profil?.suivie}}</ion-item>
+        </ion-card>
+        <div class="container-form-btn">
+          <!-- <button  [routerLink]="['modifier-profil',profil?.id]" class="form-btn custom-font">
+            Modifier
+          </button> -->
+
+          <button  routerLink="/modifier-profil" class="form-btn custom-font">
+            Modifier
+          </button>
+        </div>
+
+        <div *ngIf="InfoUser?.Type==='UTILISATEUR'" class="container-form-btn">
+          <button  routerLink="/suivi" class="form-btn custom-font">
+            Suivi
+          </button>
+        </div>
+    </div>
+    
+  </div> 
+   
+  
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-item>
+  <ion-avatar slot="start">
+    <ion-img src="../../assets/icone2.png"></ion-img>
+  </ion-avatar>
+  <div class="my-label-container">
+    <ion-label class="my-label-title">{{InfoUser.nomComplet}}</ion-label>
+    <ion-label color="medium">{{InfoUser.mobile}}</ion-label>
+  </div>
+  <ion-buttons slot="end">
+    <ion-button color="secondary">
+      <ion-icon name="camera" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>
+<ion-item>
+  <ion-label class="my-label-title">{{InfoUser.Type}}</ion-label>
+ </ion-item> -->

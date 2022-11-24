@@ -1,0 +1,49 @@
+.headd{
+  .a{
+    width: 200px; 
+    text-align: right;
+    h3{
+      margin-top: 35px; 
+      margin-right: 10px;
+    }
+  }
+  .col{
+    ion-img{
+      height: 50px;
+    margin-top:20px;
+    }
+  }
+}
+//   fin head
+
+.custom-font {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+
+ion-content{
+
+  .etat{
+    border-top: solid #1D5F24 10px;
+    background-color: #bfbfbf15;
+  }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px;
+    h3{
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  }
+ 
+  img{
+    margin: 0 auto;
+    height: 10em;
+  }
+}
+//ion-item
+ion-item{
+  border-bottom: #1D5F24 solid;
+  border-radius: 10px;
+}

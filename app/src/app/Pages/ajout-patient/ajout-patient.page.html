@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="content_div animated bounceInUp" >
+      <form #contact="ngForm" (ngSubmit)="ajoutContact(contact)" novalidate autocomplete="nope" class="ion-padding">
+      <div class="wrap-input">
+        <input class="input" type="text" name="mobile" title="Veillez renseigner le numero du patient" placeholder="Téléphone" [(ngModel)]="filterTerm" ngModel required autocomplete>
+        </div>
+        <div class="container-form-btn">
+          <button type="submit" class="form-btn custom-font">
+            Ajouter
+          </button>
+        </div>
+      </form>
+        <ion-card>
+     <ion-item *ngFor="let items of allUser | filter:filterTerm"><div class="container">
+      <div class="row">
+          <div class="col-md-auto img"><img src="../../../assets/iconImage/account.png"/></div>
+        <div class="col">
+          <ion-label >
+            <h3><b>{{items.nomComplet}}</b></h3>
+            <p> <span>Suivi: {{items.suivie}}</span> <br> {{items.mobile}}</p>
+          </ion-label>
+        </div>
+      </div>
+    </div></ion-item>
+        </ion-card>
+    </div>
+    
+  </div>
+
+<!-- ==================================== -->
+  

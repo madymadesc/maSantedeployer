@@ -1,0 +1,96 @@
+.custom-font {
+    font-family: 'Bai Jamjuree', sans-serif;
+  }
+
+  .headd{
+    .a{
+      width: 200px; 
+      text-align: right;
+      h3{
+        margin-top: 35px; 
+        margin-right: 10px;
+      }
+    }
+    .col{
+      ion-img{
+        height: 50px;
+      margin-top:20px;
+      }
+    }
+  }
+ 
+
+// =================================
+
+.total{
+    display: flex;
+    margin: 20px 0;
+    margin-left: 80px;
+    text-align: center;
+    box-shadow: 0 0 40px 0 rgba(6, 104, 3, 0.2), 0 5px 5px 0 rgba(1, 88, 8, 0.24);
+    border-radius: 20px;
+    p{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: bold;
+    }
+      
+}
+
+
+.b{
+    border-left: solid #1D5F24 10px;
+    border-right: solid #1D5F24 10px;
+    width: 10em;
+    justify-content: center;
+
+}
+
+.nombre{
+    border-top: solid #1D5F24 10px;
+}
+
+.cra{
+    display: flex;
+    border-radius: 20px;
+    height: 100px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: 0 10px 30px 0px rgba(57, 82, 57, 0.4);
+    
+    .tex{
+        width: 180px;
+    }
+    ion-img{
+        float: left;
+        height: 80px;
+        margin-top: 5px;
+        margin-left: -10px;
+    }
+
+    p{
+        font-size: 20px;
+        text-align: center; 
+        color: #1D5F24;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+}
+
+.cont{
+    margin-top: 20px;
+    span{
+        margin-left: 20px;
+        margin-top: 20px;
+        color: #1D5F24;
+    
+    }
+}
+
+

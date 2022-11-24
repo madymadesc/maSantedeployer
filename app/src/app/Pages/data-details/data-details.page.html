@@ -1,0 +1,46 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<ion-content>
+
+  <ion-list class="ion-text-center main-header">
+    <h6 (click)="gotToData()">X</h6>
+    <div class="text-center">
+      <ion-label color="white">
+        Détail
+      </ion-label>
+    </div>
+  </ion-list>
+
+  <!--========= CHOIX INTERFACE ===========-->
+  <ion-card>
+    <ion-item><b>Suivi : </b> &nbsp;&nbsp;{{InfoUser?.suivie}}</ion-item>
+    <ion-item><b>Date : </b> &nbsp;&nbsp;{{donnee?.date | date: 'dd MMM yyyy'}}</ion-item>
+    <ion-item><b>Heure : </b> &nbsp;&nbsp;{{donnee?.date | date: 'HH:mm'}} </ion-item>
+    <ion-item *ngIf="donnee?.maladies==='DIABETE'"><b>Valeur : </b> &nbsp;&nbsp;{{donnee?.valeurA}}
+      {{donnee?.valeurC}}</ion-item>
+    <ion-item *ngIf="donnee?.maladies==='TENSION'"><b>Valeur Systolique : </b> &nbsp;&nbsp;{{donnee?.valeurA}}
+    </ion-item>
+    <ion-item *ngIf="donnee?.maladies==='TENSION'"><b>Valeur Diastolique : </b> &nbsp;&nbsp; {{donnee?.valeurB}}
+    </ion-item>
+    <ion-item><b>Resultat: </b> &nbsp;&nbsp;{{donnee?.resultat}} </ion-item>
+    <ion-item>
+
+      <h4 class="aa" *ngIf="donnee?.couleur===1"></h4>
+      <h4 class="bb" *ngIf="donnee?.couleur===2"></h4>
+      <h4 class="cc" *ngIf="donnee?.couleur===3"></h4>
+
+    </ion-item>
+    <ion-item>
+      <div *ngIf="donnee?.couleur===1" class="row message">
+        <p>Etat stable continuez à suivre <br>  les bonnes pratiques</p>
+      </div>
+      <div *ngIf="donnee?.couleur===2" class="row message">
+        <p>Prenez contact avec votre médecin <br> Continuez à suivre les bonnes pratiques</p>
+      </div>
+      <div *ngIf="donnee?.couleur===3" class="row message">
+        <p>Veuillez consulter un médecin <br> dans un bref délai</p>
+      </div>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

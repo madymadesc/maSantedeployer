@@ -1,0 +1,70 @@
+.headd{
+    .a{
+      width: 200px; 
+      text-align: right;
+      h3{
+        margin-top: 35px; 
+        margin-right: 10px;
+      }
+    }
+    .col{
+      ion-img{
+        height: 50px;
+      margin-top:20px;
+      }
+    }
+  }
+//   fin head
+
+
+ion-content{
+    .row{
+        border-top: 12px #1D5F24;
+    }
+}
+
+.etat{
+    border-top: solid #1D5F24 10px;
+    background-color: #bfbfbf15;
+    .row{
+        h3{
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .tet{
+            ion-label{
+                font-weight: bold;
+            }
+        }
+        .corp{
+            ion-label{
+                font-size: 13px;
+
+            }
+        }
+    }
+}
+.wrap-input {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  border: solid #1D5F24;
+  box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+}
+
+.wrap-input:hover{
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);  
+}
+.input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.2;
+  border: none;
+  outline: none;
+  height: 35px;
+  padding: 0 20px 0 23px; 
+  font-weight: bold;
+}

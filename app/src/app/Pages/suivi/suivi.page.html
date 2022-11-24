@@ -1,0 +1,26 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<ion-content>
+
+  <ion-list class="ion-text-center main-header">
+    <h6 (click)="gotToprofile()">X</h6>
+    <div class="text-center">
+        <ion-label color="white">
+            Option de Suivi
+        </ion-label>
+    </div>
+</ion-list>
+<h5>Veuillez choisir une option <br> de suivi</h5>
+<!--========= CHOIX INTERFACE ===========-->
+<form class="form-horizontal form-material" (ngSubmit)="updateSpecia()">
+    <ion-button type="submit">
+      <ion-img src="../../assets/iconImage/glucometer.png"></ion-img> <p><strong>DIABETE</strong> </p> 
+    </ion-button>
+  </form>
+
+  <form class="form-horizontal form-material" (ngSubmit)="tension()">
+    <ion-button type="submit">
+      <ion-img src="../../assets/iconImage/tensiometer.png"></ion-img> <p><strong>TENSION</strong></p> 
+    </ion-button>
+  </form>
+</ion-content>

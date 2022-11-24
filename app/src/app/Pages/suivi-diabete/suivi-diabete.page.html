@@ -1,0 +1,77 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="container headd" routerLink="/profile" >
+      <div class="row" style="display: flex;">
+        <div class="col a" ><h3></h3></div>
+        <div class="col"><ion-img src="../../../assets/iconImage/account.png"></ion-img></div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<!-- =========================== -->
+
+<ion-content class="haut">
+  <div class="main_content_div">
+    <ion-buttons slot="start" class="back_btn">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <div class="user_div">
+
+    </div>
+
+    <div class="content_div animated bounceInUp" >
+        <ion-label class="info">Suivi Diabète</ion-label>
+    </div>
+  <form #donnee="ngForm" (ngSubmit)="calculD(donnee)" novalidate autocomplete="nope" >
+  
+    <ion-card-content>
+      Quel est le taux de votre glucose <br> aujourd'hui ?
+    </ion-card-content>
+    <!-- =========================UNITE mg/dl======================== -->
+    <div class="wrap-input">
+            <ion-select #unite type="number" class="col1" name="unite" placeholder="Unite mg/dl ou g/l"  ngModel required >
+              <ion-select-option value="2">mg/dl</ion-select-option>
+              <ion-select-option value="3">g/l</ion-select-option>
+            </ion-select>
+    </div>
+
+    <!-- =========================UNITE mg/dl======================== -->
+    <div *ngIf="unite.value==='2'">
+      <h4><span>{{rangeVal}}</span> mg/dl</h4>
+      <ion-range [(ngModel)]="rangeVal" min="40" max="160" pin="true" type="number" ngModel name="valeurA">
+        <ion-icon slot="start" size="medium" name="fitness-outline" color="green"></ion-icon>
+        <ion-icon slot="end" size="medium" name="fitness-outline" color="danger"></ion-icon>
+      </ion-range>
+    </div>
+    
+    <!-- =========================UNITE g/l======================== -->
+
+    <div *ngIf="unite.value==='3'">
+      <h4><span>{{customSteps}}</span> g/l</h4>
+      <ion-range [(ngModel)]="slider" min="0" max="20"  (ionChange)="watchSlider()" type="" ngModel name="valeurC">
+        <ion-icon slot="start" size="medium" name="fitness-outline" color="green"></ion-icon>
+        <ion-icon slot="end" size="medium" name="fitness-outline" color="danger"></ion-icon>
+      </ion-range>
+    </div>
+
+  <div class="container-form-btn">
+    <button  type="submit" class="form-btn custom-font">
+    Validez
+    </button>
+  </div> 
+  
+
+</form>
+    
+
+  </div>  
+</ion-content>
+
+
+
+

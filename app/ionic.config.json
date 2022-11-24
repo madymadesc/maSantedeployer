@@ -1,0 +1,7 @@
+{
+  "name": "Masante",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

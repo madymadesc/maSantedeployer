@@ -1,0 +1,37 @@
+<!-- header -->
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button menuId="custom-menu" slot="start"></ion-menu-button>
+    <div class="container headd" routerLink="/profile" >
+      <div class="row" style="display: flex;">
+        <div class="col a" ><h3></h3></div>
+        <div class="col"*ngIf="InfoUser?.Type==='MEDECIN'"><ion-img src="../../../assets/iconImage/doctor.png"></ion-img></div>
+        <div class="col" *ngIf="InfoUser?.Type==='UTILISATEUR'"><ion-img src="../../../assets/iconImage/account.png"></ion-img></div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<!-- fin header -->
+
+<ion-content>
+  <div class="container etat">
+    <div class="row">
+      <img src="../../assets/image/logoo.png">
+    </div>
+    <div class="row">
+      <h3>Les Bonnes Pratiques</h3>
+    </div>
+    <div class="row" *ngFor="let items of list">
+      <ion-item [routerLink]="['/conseil',items.id]">
+        <!-- <ion-avatar  slot="start"> -->
+          <img style="height: 50px;margin-right: 10px;" src="{{img}}{{items?.id}}" />
+        <!-- </ion-avatar> -->
+        <ion-label>
+          <h3>{{items?.libelle}}</h3>
+          <p>{{items?.description}}</p>
+        </ion-label>
+      </ion-item>
+    </div>
+    
+  </div>
+  </ion-content>

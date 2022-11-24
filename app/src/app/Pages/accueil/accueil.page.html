@@ -1,0 +1,99 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- header -->
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button menuId="custom-menu" slot="start"></ion-menu-button>
+    <div class="container headd" routerLink="/profile" >
+      <div class="row" style="display: flex;">
+        <div class="col a" ><h3></h3></div>
+        <div class="col"*ngIf="InfoUser?.Type==='MEDECIN'"><ion-img src="../../../assets/iconImage/doctor.png"></ion-img></div>
+        <div class="col" *ngIf="InfoUser?.Type==='UTILISATEUR'"><ion-img src="../../../assets/iconImage/account.png"></ion-img></div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<!-- fin header -->
+<ion-content class=".custom-font ">
+  <!-- ================ contenu================== -->
+  <div class="container etat">
+    <div class="row bare">
+      
+    </div>
+    <p class="suivie"> <span>Suivi : </span> <strong>{{compteDetail?.suivie}}</strong></p>
+    <h4>Etat actuel</h4> 
+    <div class="row">
+      <div class="col">
+      <h3>{{resultat}}</h3> 
+
+      </div>
+      <div class="col">
+        <h4 class="aa" *ngIf="couleur===1"></h4> 
+        <h4 class="bb" *ngIf="couleur===2"></h4> 
+        <h4 class="cc" *ngIf="couleur===3"></h4> 
+      </div>
+    </div>
+    <div *ngIf="couleur===1" class="row message">
+      <p>Etat stable continuez à suivre <br>  les bonnes pratiques</p>
+    </div>
+    <div *ngIf="couleur===2" class="row message">
+      <p>Prenez contact avec votre médecin <br> Continuez à suivre les bonnes pratiques</p>
+    </div>
+    <div *ngIf="couleur===3" class="row message">
+      <p>Veuillez consulter un médecin <br> dans un bref délai</p>
+    </div>
+    </div>
+  <!-- ================================= -->
+  <div class="container">
+
+    <!-- premier bloc -->
+    <div class="row">
+      <div class="col-sm" *ngIf="compteDetail?.suivie==='DIABETE'" >
+        <ion-card title="Ajouter une Donnée" routerLink="/suivi-diabete" >
+          <ion-img src="../../assets/iconImage/plus.png"></ion-img>
+          <p>Ajouter</p>
+        </ion-card>
+      </div>
+      <!-- =========== -->
+      <div class="col-sm" *ngIf="compteDetail?.suivie==='TENSION'" >
+        <ion-card title="Ajouter une Donnée" routerLink="/suivi-tension" >
+          <ion-img src="../../assets/iconImage/plus.png"></ion-img>
+          <p>Ajouter</p>
+        </ion-card>
+      </div>
+      <!-- ============ -->
+      <div class="col-sm" *ngIf="compteDetail?.suivie===''" >
+        <ion-card title="Veuillez choisir un suivi" routerLink="/suivi" >
+          <p> Veuillez choisir un suivi</p>
+        </ion-card>
+      </div>
+
+    <div class="col-sm">
+      <ion-card title="Mes Donnée" routerLink="/data">
+        <ion-img src="../../assets/iconImage/database.png"></ion-img>
+        <p>Données</p>
+      </ion-card>
+    </div>
+  </div>
+
+  <!-- deuxieme bloc -->
+  <div class="row">
+    <div class="col-sm">
+      <ion-card title="Les Conseils Médicals" routerLink="/conseil-sante" >
+        <ion-img src="../../assets/iconImage/pharmacy.png"></ion-img>
+        <p>Conseils</p>
+      </ion-card>
+    </div>
+
+  <div class="col-sm">
+    <ion-card title="Mes Médecins" routerLink="/docteur">
+      <ion-img src="../../assets/iconImage/doctor.png"></ion-img>
+      <p>Médecins</p>
+    </ion-card>
+  </div>
+</div>
+
+</div>
+  <!-- ================================== -->
+</ion-content>
+
+

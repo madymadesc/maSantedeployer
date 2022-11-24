@@ -1,0 +1,109 @@
+.headd{
+    .a{
+      width: 200px; 
+      text-align: right;
+      h3{
+        margin-top: 35px; 
+        margin-right: 10px;
+      }
+    }
+    .col{
+      ion-img{
+        height: 50px;
+      margin-top:20px;
+      }
+    }
+  }
+  //   fin head
+  
+  .custom-font {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  
+  ion-content{
+    --background: #1D5F24;
+    .main_content_div{
+        width: 100%;
+        .menu_btn{
+            position: relative;
+            top: 40px;
+            left: 10px;
+        }
+    }
+    ion-label{
+        display: block;
+        color: white;
+        text-align: center;
+    }
+    .content_div{
+        background: white;
+        width: 100%;
+        border-top-right-radius: 75px;
+        margin-top: 10px;
+        padding-top: 30px;
+        ion-card{
+            h4,h5{
+                text-align: center;
+                font-weight: bold;
+                color: #1D5F24;
+            }
+            h4{
+                text-decoration: underline;
+            }
+            p{
+                margin-left: 15px;
+                font-size: 16px;
+            }
+        }
+    }
+    .info{
+        color:#1D5F24;
+        font-size: 20px;
+        font-weight: bold;
+  
+    }
+   
+    .animated{
+        --webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes bounceInUp{
+        0%{
+            opacity: 0;
+            -webkit-transform :translateY(200px);
+        }
+       
+        80%{
+         
+         -webkit-transform :translateY(10px);
+        }
+        
+    }
+  
+    .bounceInUp{
+        -webkit-animation-name: bounceInUp;
+        animation-name: bounceInUp;
+    }
+    @keyframes bounceInUp{
+     0%{
+         opacity: 0;
+         -webkit-transform :translateY(200px);
+     }
+     
+     80%{
+     
+      -webkit-transform :translateY(10px);
+     }
+     
+    }
+    ion-item{
+      font-size: 17px;
+    }
+    
+  }
+  
+
+  
+  

@@ -1,0 +1,81 @@
+.custom-font {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+ ion-content {
+  
+
+
+  text-align: center;
+
+  .main-header{
+      height: 25vh;
+      width: 120%;
+      background: #0b4402;
+      box-shadow: 0 1px 10px var(--ion-color-light);
+      border-radius: 0 0 50% 50%;
+      margin-left: -4.5vh;
+      div{
+          transform: translateY(3vh);
+          ion-label{
+              font-weight: bold;
+              font-size: 1.2rem;
+              color: #fff;
+              p{
+                  margin-top: 3px;
+                  ion-text{
+                      font-size: 0.7rem;
+                      color: #fff;
+                  }
+              }
+          }
+
+      }
+  }
+
+  h6{
+      margin-top: 20px;
+      margin-right: 80px;
+      text-align: right;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 30px;
+      color: #ffffff;
+  }
+ 
+  h5{
+      color: #1D5F24;
+      font-weight: bold;
+      margin-top: 70px;
+  }
+  
+
+}
+
+.aa{
+  font-size: 20px;
+  background-color: #6FD007;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  height: 10px;
+  width:  100%;
+  border-top: 0;
+}
+.bb{
+font-size: 20px;
+background-color: #FFC000;
+border-radius: 30px;
+  margin-bottom: 20px;
+  height: 10px;
+  width:  100%;
+border-top: 0;
+}
+.cc{
+font-size: 20px;
+background-color: #ff0000;
+border-radius: 30px;
+margin-bottom: 20px;
+height: 10px;
+width:  100%;
+border-top: 0;
+}

@@ -1,0 +1,60 @@
+.custom-font {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+ion-slide{
+    flex-direction: column;
+    height: 100vh;
+    p{
+      color: #fff;
+    }
+    
+}
+
+ion-footer{
+  margin-top: 300px;
+  ion-button{
+    width: 80vw;
+}
+h5{
+  color: #fff;
+  cursor: pointer;
+}
+}
+
+  
+  .bg-1 {
+    background-image: url('../../../assets/image/Frame\ 10.png');
+    background-size: cover;
+  }
+  .bg-2 {
+    background-image: url('../../../assets/image/Frame\ 15.png');
+    background-size: cover;
+  }
+  .bg-3 {
+    background-image: url('../../../assets/image/Frame\ 8.png');
+    background-size: cover;
+  }
+
+  .container-form-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-btn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 45px;
+    width: 14em;
+    background-color: #1D5F24;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.5);
+  }
+
+  .form-btn:hover {
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
+  }
