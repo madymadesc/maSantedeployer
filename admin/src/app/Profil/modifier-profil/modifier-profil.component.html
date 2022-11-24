@@ -1,0 +1,68 @@
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="page-wrapper">
+    <div class="page-breadcrumb bg-white">
+        <div class="row align-items-center sous-header">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <a [routerLink]="['/detail-profil']"><i class="fas fa-angle-double-left"></i></a>
+                <h4 class="page-title">Modifier Prolil</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <div class="d-md-flex"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="form-horizontal form-material" (ngSubmit)="updateProfil()">
+                            <div class="form-group mb-4">
+                                <label class="col-md-12 p-0">Nom Complet</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text" class="form-control p-0 border-0" name="nomComplet" [(ngModel)]="profil.nomComplet" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="col-md-12 p-0" >Adresse</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text" class="form-control p-0 border-0" name="adresse" [(ngModel)]="profil.adresse" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="col-md-12 p-0">Téléphone</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text" class="form-control p-0 border-0" name="mobile" [(ngModel)]="profil.mobile" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="col-md-12 p-0">Annee de Naissance</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text" class="form-control p-0 border-0" name="age" [(ngModel)]="profil.age" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="example-email" class="col-md-12 p-0" >Email</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text" class="form-control p-0 border-0" name="libelle" [(ngModel)]="profil.email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="example-email" class="col-md-12 p-0" >Mot de Passe</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text" class="form-control p-0 border-0" name="motDePasse" [(ngModel)]="profil.motDePasse" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 align-button">
+                                    <button class="btn btn-warning" type="submit">Modifier</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

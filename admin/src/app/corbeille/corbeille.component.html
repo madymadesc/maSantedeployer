@@ -1,0 +1,244 @@
+
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="page-wrapper toot"> 
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <div class="container">
+                    <h1 class="ada"></h1>
+                  </div>
+                <!--  -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                      <h1></h1>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                      
+                    </div>
+                  </div>
+                </div>
+                    <!-- =================chifre====================  -->
+                    <p-tabView >
+  <!-- ============================Conseil========================================= -->
+                      <p-tabPanel  header="Conseils">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-sm">
+                            </div>
+                              <div class="col-sm total a">
+                              <div class="col-sm aa">
+                                <i class="fab fa-readme" aria-hidden="true"></i>
+                                </div>
+                              <div class="col-sm bb">
+                              <h1>{{conseils.length}}</h1>
+                              <p>Conseils</p>
+                            </div>
+                          </div>
+                          <div class="col-sm">
+                          </div>
+                          </div>
+                        </div>
+                <!-- ==============recherche==================  -->
+                
+                <div class="container">
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Les Comptes</h3>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">  
+                                  <form #e="ngForm" autocomplete="off">
+                                    <a  class="active">
+                                      <i class="fa fa-search"></i>
+                                  </a>
+                                      <input type="text" name="search" [(ngModel)]="search" class="form-control mt-0" placeholder="Recherche...">
+                                  </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                                <!-- ================= table============================== -->
+                                
+
+                                <p-table [value]="conseils |filter:search" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" class="table no-wrap">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Libelle</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
+                                      </tr>
+                                  </ng-template>
+                                  <ng-template pTemplate="body" let-conseils>
+                                      <tr>
+                                        <td >{{conseils.libelle}}</td>
+                                        <td >{{conseils.description}}</td>
+                                        <td>
+                                          <span class="text-success alignement bin">
+                                              <a (click)="changeEtat(conseils.id)" >
+                                              <img  src="../../assets/images/bin.png" alt="" >
+                                            </a>
+                                           </span>
+                                      </td>
+                                      </tr>
+                                </ng-template>
+                            </p-table>
+                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </p-tabPanel>
+  <!-- ============================Maladie========================================= -->
+                      <p-tabPanel header="Maladies">
+                        <div class="container">
+                          <div class="row">
+                          
+                            <div class="col-sm"></div>
+                              <div class="col-sm total a">
+                                <div class="col-sm aa">
+                                  <i class="fas fa-diagnoses" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-sm bb">
+                              <h1>{{maladie.length}}</h1>
+                              <p>Maladies</p>
+                            </div>
+                          </div>
+                            <div class="col-sm"></div>
+                          </div>
+                        </div>
+                <!-- ==============recherche==================  -->
+                
+                <div class="container">
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Les Comptes</h3>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">  
+                                  <form #e="ngForm" autocomplete="off">
+                                    <a  class="active">
+                                      <i class="fa fa-search"></i>
+                                  </a>
+                                      <input type="text" name="search" [(ngModel)]="search" class="form-control mt-0" placeholder="Recherche...">
+                                  </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                                <!-- ================= table============================== -->
+                                
+
+                                <p-table [value]="maladie |filter:search" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" class="table no-wrap">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Libelle</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
+                                      </tr>
+                                  </ng-template>
+                                  <ng-template pTemplate="body" let-maladie>
+                                      <tr>
+                                        <td >{{maladie.libelle}}</td>
+                                        <td >{{maladie.description}}</td>
+                                        <td>
+                                          <span class="text-success alignement bin">
+                                              <a (click)="changeEtat(maladie.id)" >
+                                              <img  src="../../assets/images/bin.png" alt="" >
+                                            </a>
+                                           </span>
+                                      </td>
+                                      </tr>
+                                </ng-template>
+                            </p-table>
+                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </p-tabPanel>
+<!-- ================================================SPecialite======================= -->
+                      <p-tabPanel header="Spécialités">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-sm">
+                            </div>
+                              <div class="col-sm total a">
+                              <div class="col-sm aa">
+                                <i class="fas fa-stethoscope" aria-hidden="true"></i>
+                                </div>
+                              <div class="col-sm bb">
+                              <h1>{{specialite.length}}</h1>
+                              <p>Spécialités</p>
+                            </div>
+                          </div>
+                          <div class="col-sm">
+                          </div>
+                          </div>
+                        </div>
+                <!-- ==============recherche==================  -->
+                
+                <div class="container">
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Les Comptes</h3>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">  
+                                  <form #e="ngForm" autocomplete="off">
+                                    <a  class="active">
+                                      <i class="fa fa-search"></i>
+                                  </a>
+                                      <input type="text" name="search" [(ngModel)]="search" class="form-control mt-0" placeholder="Recherche...">
+                                  </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                                <!-- ================= table============================== -->
+                                
+
+                                <p-table [value]="specialite |filter:search" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" class="table no-wrap">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Libelle</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
+                                      </tr>
+                                  </ng-template>
+                                  <ng-template pTemplate="body" let-specialite>
+                                      <tr>
+                                        <td >{{specialite.libelle}}</td>
+                                        <td >{{specialite.description}}</td>
+                                        <td>
+                                          <span class="text-success alignement bin">
+                                              <a (click)="changeEtat(specialite.id)" >
+                                              <img  src="../../assets/images/bin.png" alt="" >
+                                            </a>
+                                           </span>
+                                      </td>
+                                      </tr>
+                                </ng-template>
+                            </p-table>
+                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </p-tabPanel>
+            </p-tabView>
+
+            <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+
+    </div>
+</div>
+
+<!-- ++++++++++++++++++++++++++=================================+++++++++++++++++++++++++++++ -->

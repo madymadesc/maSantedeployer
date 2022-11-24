@@ -1,0 +1,103 @@
+
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="page-wrapper toot">
+    <div class="container-fluid">
+
+                <!-- ============================CHIFFRE================================== -->
+                <div class="container">
+                    <h1 class="ada"></h1>
+                  </div>
+                <!--  -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm total a">
+                      <div class="col-sm aa">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-sm bb">
+                        <h1>{{utlisateurLength}}</h1>
+                        <p>Utilisateurs</p>
+                      </div>
+                    </div>
+                      <div class="col-sm total b">
+                        <div class="col-sm aa">
+                          <i class="fas fa-diagnoses" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-sm bb">
+                        <h1>{{maladieLength}}</h1>
+                        <p>Maladies</p>
+                      </div>
+                    </div>
+                      <div class="col-sm">
+                        <div class="col-sm aa">
+
+                        </div>
+                        <div class="col-sm bb">
+                        <h1></h1>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="container">
+                </div>
+                
+                <!-- ================================LISTE============================== -->
+                
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Les Utilisateurs</h3>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
+                                        <form #e="ngForm" autocomplete="off">
+                                          <a  class="active">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                            <input type="text" name="search" [(ngModel)]="search" class="form-control mt-0" placeholder="Recherche...">
+                                        </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                              <!-- ================= table============================== -->
+
+                              <p-table [value]="utlisateur |filter:search" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                              currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" class="table no-wrap">
+                              <ng-template pTemplate="header">
+                                  <tr>
+                                    <th>Nom</th>
+                                    <th>Adresse</th>
+                                    <th>Téléphone</th>
+                                    <th>Détails</th>
+                                  </tr>
+                              </ng-template>
+                              <ng-template pTemplate="body" let-utlisateur>
+                                  <tr>
+                                    <td class="txt-oflo" >{{utlisateur.nomComplet}}</td>
+                                    <td class="txt-oflo" >{{utlisateur.adresse}}</td>
+                                    <td class="txt-oflo" >{{utlisateur.mobile}}</td>
+                                    <td class="txt-oflo">
+                                        <a [routerLink]="['/detail-utilisateur', utlisateur.id]"><i class="fas fa-info-circle" aria-hidden="true"></i></a>
+                                    </td>
+                                  </tr>
+                              </ng-template>
+                          </p-table>
+                          </div>
+                          </div>
+                    </div>
+                </div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+        <header class="topbar" >
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header t" >
+                    <a class="navbar-brand" href="accueil">
+                        <!-- Logo icon -->
+                        <b class="logo-icon" style=" margin: 0 auto;">
+                            <img src="../../assets/images/Fram.png" style="width: 150px; height: 120px;" alt="homepage" />
+                        </b>
+                    </a>
+                    <hr>
+                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                        href="javascript:void(0)"><i  style="color: white;" class="ti-menu ti-close"></i></a>
+                </div>
+                <hr>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" >
+                    <hr>
+                   
+                    <h5>Ma Sante application de suivie de tension et du diabete</h5>
+                    <!-- ============================================================== -->
+                 
+                       <b style="margin-left: 500px; font-weight: bold;color: #fff;">{{ Aujor | date: 'dd MMM yyyy'| uppercase}}</b> 
+                    
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <li>
+                            <a class="profile-pic" (click)="profil()">
+                                <img src="../../assets/images/admin.png" alt="user-img" width="36"
+                                    class="img-circle"><span class="text-white font-medium">{{adminConnect.nomComplet}}</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>

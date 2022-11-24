@@ -1,0 +1,49 @@
+
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="page-wrapper toot">
+    <div class="page-breadcrumb bg-white">
+        <div class="row align-items-center sous-header">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <a [routerLink]="['/liste-conseil']"><i class="fas fa-angle-double-left"></i></a>
+                <h4 class="page-title">Détail Conseils</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <div class="d-md-flex"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+                
+                <!--  -->
+                
+                    <!--  -->
+                
+                <!--  -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex">
+                                <div class="container ttextt">
+                                    <div class="row">
+                                      <div class="col text-center"><img class="img-circle" src="{{img}}{{conseil.id}}" alt=""></div>
+                                      
+                                      <div class="w-100"></div>
+                                      <div class="col">
+                                        <h4>Libelle</h4> {{conseil.libelle}} <br><h4>Date</h4> {{conseil.date}}
+                                        </div>
+                                      <div class="w-100"></div>
+                                      <div class="col">
+                                          <h4>Description</h4>
+                                          {{conseil.description}}
+                                        </div>
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  </div>
+</div>

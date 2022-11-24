@@ -1,0 +1,31 @@
+
+<body>
+
+    <form id="form" #formu="ngForm" (ngSubmit)="connexion(formu)"  class="container" autocomplete="off">
+        <img src="../../../assets/images/Frame.png">
+        <h1>Dashboard</h1>
+        <div class="input-control">
+            <!-- <label>Mobile</label> -->
+            <input id="mobile" type="mobile" placeholder="  Email ou Téléphone " name="mobile" class="form-control p-0 border-0 " ngModel required>
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <!-- <label>Mot de passe</label> -->
+            <input id="motDePasse" type="password" required 
+                maxlength ='8' placeholder="Mot de passe" name="motDePasse" class="form-control p-0 border-0 "ngModel required>
+                <div class="error"></div>
+        </div>
+        <a (click)="showBasicDialog()">Mot de passe oublier ?</a>
+        <button type="submit">Connexion</button>   
+    </form> 
+
+<p-dialog header="Mot de passe oublié" [(visible)]="displayBasic" [style]="{width: '50vw'}" class="motdep">
+    <p>Renseignez votre numéro de  téléphone ou Email.</p>
+        <input type="text"  placeholder="  Email ou Téléphone " name="mobile" name="email" required>
+        <button type="submit">Validez</button> 
+    <ng-template pTemplate="footer">
+    </ng-template>
+</p-dialog>
+        <script src="../../../assets/validation/validation.js"></script>
+    </body>
+    

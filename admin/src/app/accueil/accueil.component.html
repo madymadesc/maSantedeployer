@@ -1,0 +1,100 @@
+
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="page-wrapper toot"> 
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <div class="container">
+                    <h1 class="ada"></h1>
+                  </div>
+                <!--  -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                      <h1>Bienvenue !!!</h1>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                   
+                  </div>
+                </div>
+                    <!-- =================chifre====================  -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm total a">
+                      <div class="col-sm aa">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-sm bb">
+                        <h1>{{user}}</h1>
+                        <p>Utilisateurs</p>
+                      </div>
+                    </div>
+                    <div class="col-sm total b">
+                      <div class="col-sm aa">
+                        <i class="fas fa-user-md" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-sm bb">
+                      <h1>{{medec}}</h1>
+                      <p>Medecins</p>
+                    </div>
+                    </div>
+                    <div class="col-sm total c">
+                      <div class="col-sm aa">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm bb">
+                      <h1>{{noon}}</h1>
+                      <p>Comptes</p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <!-- ==============recherche==================  -->
+                <div class="container">
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Les Comptes</h3>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">  
+                                  <form #e="ngForm" autocomplete="off">
+                                    <a  class="active">
+                                      <i class="fa fa-search"></i>
+                                  </a>
+                                      <input type="text" name="search" [(ngModel)]="search" class="form-control mt-0" placeholder="Recherche...">
+                                  </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                                <!-- ================= table============================== -->
+
+                                <p-table [value]="formateur |filter:search" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" class="table no-wrap">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Email</th>
+                                        <th>Téléphone</th>
+                                        <th>Compte</th>
+                                        <th>Age</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-formateur>
+                                    <tr>
+                                        <td>{{formateur.nomComplet}}</td>
+                                        <td>{{formateur.email}}</td>
+                                        <td>{{formateur.mobile}}</td>
+                                        <td>{{formateur.Type}}</td>
+                                        <td>{{formateur.age}} Ans</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="page-wrapper toot">
+    <div class="container-fluid">
+
+        <!-- <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <a [routerLink]="['/liste-utilisateur']"><i class="fas fa-angle-double-left"></i></a>
+            <h4 class="page-title">Détail Utilisateur</h4>
+        </div> -->
+
+                <!-- ============================CHIFFRE================================== -->
+                <div class="container">
+                    <h1 class="ada"></h1>
+                  </div>
+                <!--  -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                  </div>
+                </div>
+                <div [routerLink]="['/detail-utilisateur', userU.id]" class="container ppp">
+                  <div class="row">
+                    <div class="col-sm total a">
+                        <div class="col-sm bb">
+                            <h1>{{userU.nomComplet}}</h1>
+                            <p>{{userU.age}} Ans</p>
+                          </div>
+                     
+                    </div>
+                      <div class="col-sm total b">
+                        <div class="col-sm bb">
+                            <p>{{userU.Type}}</p>
+                        <p>{{userU.adresse}}</p>
+                      </div>
+                    </div>
+                      <div class="col-sm total c">
+                        <div class="col-sm bb">
+                            <p >{{userU.mobile}}</p>
+                            <p>{{userU.email}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                
+            <a [routerLink]="['/liste-donnee']"><i class="fas fa-angle-double-left"></i></a>
+                
+                <!-- ================================LISTE============================== -->
+                
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Les Donnees</h3>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
+                                        <form #e="ngForm" autocomplete="off">
+                                          <a  class="active">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                            <input type="text" name="search" [(ngModel)]="search" class="form-control mt-0" placeholder="Recherche...">
+                                        </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                              <!-- ================= table============================== -->
+
+                              <p-table [value]="user |filter:search" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                              currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" class="table no-wrap">
+                              <ng-template pTemplate="header">
+                                  <tr>
+                                    <th>Date</th>
+                                    <th>Analyse</th>
+                                    <th>Valeur</th>
+                                    <th>Résultat</th>
+                                  </tr>
+                              </ng-template>
+                              <ng-template pTemplate="body" let-user>
+                                  <tr>
+                                    <td class="txt-oflo" >{{user.date | date: 'dd MMM yyyy'}}</td>
+                                    <td class="txt-oflo" >{{user.maladies}}</td>
+                                    <td class="txt-oflo" >{{user.valeurA}} <i *ngIf="user.valeurB" style="color: rgb(175, 175, 175);">|</i> {{user.valeurB}} <i style="color: rgb(175, 175, 175);"></i> {{user.valeurC}}</td>
+                                    <td class="txt-oflo" >{{user.resultat}}</td>
+                                    
+                                  </tr>
+                              </ng-template>
+                          </p-table>
+                          </div>
+                          </div>
+                    </div>
+                </div>
+</div>
+</div>
